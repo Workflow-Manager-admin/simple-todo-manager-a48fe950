@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import TodoPageFrame from './TodoPageFrame';
-
 // PUBLIC_INTERFACE
 function App() {
   const [theme, setTheme] = useState('light');

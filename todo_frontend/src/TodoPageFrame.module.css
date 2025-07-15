@@ -6,8 +6,8 @@
   overflow: hidden;
   box-sizing: border-box;
   margin: 0 auto;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  border: 1px solid #eee;
+  box-shadow: 0 2.5px 14px 0 rgba(125,130,173,0.11);
 }
 
 .frameBackgroundImg {
@@ -18,23 +18,58 @@
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 0;
-  pointer-events: none; /* To ensure image doesn't intercept any interactions */
+  z-index: 999;
+  pointer-events: none;
 }
 
-/* Placeholder for child nodes to be replaced with real components */
-.childPlaceholder {
-  position: relative;
-  z-index: 1;
-  min-height: 40px;
-  min-width: 60px;
-  /* Temporary visual to indicate placeholder—remove/comment when children are implemented */
-  outline: 1px dashed #aaa;
-  margin: 8px 0;
-  background: rgba(255,255,200,0.12);
+.appBar {}
+
+.titleText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+}
+
+.fab {
+  /* Floating action button: handled inline for Figma fidelity */
+  box-shadow: 0 4px 14px 0 rgba(147,150,211,0.23);
+}
+
+.todosList {
+  /* Handles scroll etc: styled in JS for position */
+}
+
+.todoCard {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.11);
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 4;
+}
+
+.iconBtn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  border-radius: 8px;
+  width: 29px;
+  height: 29px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  font-size: 11px;
-  color: #bbb;
+  transition: background 0.13s;
+}
+
+.iconBtn:active,
+.iconBtn:focus {
+  background: #eceaf6;
+  outline: none;
+}
+
+.navigationBar {
+  /* Styled inline for px-perfect layout. If generalized, use flex. */
 }
